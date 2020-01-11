@@ -1,0 +1,23 @@
+{
+  "name": "sapper-sources",
+  "version": "1.0.0",
+  "main": "dist/sapper-sources.cjs.js",
+  "module": "dist/sapper-sources.esm.js",
+  "dependencies": {
+    "front-matter": "^3.1.0",
+    "marked": "^0.8.0",
+    "uuidv5": "^1.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.20.0"
+  },
+  "scripts": {
+    "build": "rollup -c --exports named",
+    "dev": "rollup -c -w --exports named",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
