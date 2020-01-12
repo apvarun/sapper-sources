@@ -1,4 +1,4 @@
-export default function() {
+export default function(config) {
   if (!config.plugin) {
     console.error('Plugin not defined');
     return;

@@ -1,6 +1,7 @@
 {
   "name": "sapper-sources",
-  "version": "1.0.0",
+  "version": "0.0.2",
+  "description": "Pre-built content sources for your Sapper Application",
   "main": "dist/sapper-sources.cjs.js",
   "module": "dist/sapper-sources.esm.js",
   "dependencies": {
@@ -19,5 +20,21 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "author": {
+    "name": "Varun A P",
+    "url": "https://apvarun.com"
+  },
+  "bugs": "https://github.com/apvarun/sapper-sources/issues",
+  "homepage": "https://github.com/apvarun/sapper-sources",
+  "license": "MIT",
+  "keywords": [
+    "sapper",
+    "source plugin",
+    "svelte"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apvarun/sapper-sources.git"
+  }
 }

@@ -5,9 +5,11 @@ async function gatsbyPluginHelper(plugin, options) {
   const controller = await import(pluginPath);
 
   const contents = [];
+  const createNode = data => contents.push(data);
+
   await controller.sourceNodes(
     {
-      actions: { createNode: contents.push },
+      actions: { createNode },
       createNodeId,
     },
     options,

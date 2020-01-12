@@ -17,6 +17,7 @@ jobs:
     - stage: npm release
       script: echo "Deploying to npm ..."
       deploy:
+        edge: true
         provider: npm
         email: $NPM_USERNAME
         api_key: $NPM_TOKEN

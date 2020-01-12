@@ -1,12 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import uuidv5 from 'uuid/v5';
+import uuidv5 from 'uuidv5';
 
 const CWD = process.cwd();
-const POSTS_DIR = path.join(CWD, dir);
 const seedConstant = 'sapper-sources';
 
-export const createNodeId = (id, namespace) => {
+export const createNodeId = id => {
   if (typeof id === `number`) {
     id = id.toString();
   } else if (typeof id !== `string`) {
@@ -15,10 +14,11 @@ export const createNodeId = (id, namespace) => {
     );
   }
 
-  return uuidv5(id, uuidv5(namespace, seedConstant));
+  return uuidv5(uuidv5('URL', seedConstant), id);
 };
 
 export const getFilesOfType = (dir, filelist, fileExtension = '') => {
+  const POSTS_DIR = path.join(CWD, dir);
   const files = fs.readdirSync(POSTS_DIR);
   filelist = filelist || [];
   files
@@ -35,7 +35,7 @@ export const getFilesOfType = (dir, filelist, fileExtension = '') => {
   return filelist
     .map(path => {
       try {
-        const content = fs.readFileSync(cwd + path, 'utf8');
+        const content = fs.readFileSync(CWD + path, 'utf8');
         return { path, content };
       } catch (err) {
         console.warn(err);

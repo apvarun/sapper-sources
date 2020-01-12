@@ -8,7 +8,7 @@ export default [
       'front-matter',
       'marked',
       'reading-time',
-      'uuid/v5',
+      'uuidv5',
       'fs',
       'path',
     ],
