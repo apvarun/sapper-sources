@@ -2,6 +2,9 @@
 
 <div align="center">
   Pre-built <code>content sources</code> for your Sapper Application
+  <br/>
+  <br/>
+  Provides ability to use gatsby-source plugins in Sapper
 </div>
 
 <br />
@@ -59,9 +62,24 @@ export default {
 };
 ```
 
+Using gatsby source plugins in sapper:
+
+```javascript
+import sapperSource, { gatsbyPlugin } from 'sapper-sources';
+
+export default {
+  source: sapperSource({
+    plugin: gatsbyPlugin('gatsby-source-rss-feed'),
+    options: {
+      // Optional custom parameters to be accessible in your svelte files
+    },
+  }),
+};
+```
+
 ## Built With
 
-* [Stunning Theme](https://github.com/apvarun/sapper-stunning-theme) - Starter blog theme built on top of Sapper(Svelte).
+- [Stunning Theme](https://github.com/apvarun/sapper-stunning-theme) - Starter blog theme built on top of Sapper(Svelte).
 
 ## Contributing
 
