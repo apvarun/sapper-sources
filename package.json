@@ -1,7 +1,7 @@
 {
   "name": "sapper-sources",
   "version": "0.0.2",
-  "description": "Pre-built content sources for your Sapper Application",
+  "description": "Pre-built content sources for your Sapper Application, with support for gatsby plugins",
   "main": "dist/sapper-sources.cjs.js",
   "module": "dist/sapper-sources.esm.js",
   "dependencies": {
@@ -31,7 +31,8 @@
   "keywords": [
     "sapper",
     "source plugin",
-    "svelte"
+    "svelte",
+    "gatsby plugin"
   ],
   "repository": {
     "type": "git",
